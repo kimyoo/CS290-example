@@ -17,7 +17,17 @@ app.get('/',function(req,res){
 
 
 
-app.get('/get-loopback-improved',function(req,res){
+/* app.get('/get-loopback-improved',function(req,res){
+  var qParams = [];
+  for (var p in req.query){
+    qParams.push({'name':p,'value':req.query[p]})
+  }
+  var context = {};
+  context.dataList = qParams;
+  res.render('get-loopback-improved', context);
+}); */
+
+app.get('/getRequest',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
